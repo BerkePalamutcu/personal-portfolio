@@ -1,0 +1,161 @@
+.text-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  margin-left: 5em;
+}
+
+h1 {
+  font-size: 6em;
+  display: flex;
+  font-weight: 600;
+  font-family: "Noticia Text", serif;
+  width: 0;
+  padding: 0.6em;
+  padding-left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation: typewriter 1s steps(44) 1s 1 normal both;
+}
+.type-out-container {
+  display: flex;
+  align-items: center;
+}
+.text-block {
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 1.5em;
+  left: 0;
+  font-family: "Noticia Text", serif;
+  user-select: none;
+}
+
+.block-container {
+  display: flex;
+  width: 750px;
+
+  animation: puff-in-center 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2s both;
+}
+
+span {
+  user-select: none;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    bottom: -4px;
+    content: "";
+    display: flex;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;
+    transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover::after {
+    width: 100%;
+    opacity: 0.9;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    padding-left: 0;
+  }
+
+  .text-block {
+    font-size: 2em;
+  }
+
+  .block-container {
+    width: 550px;
+  }
+  .text-wrapper {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 750px) and (min-width: 250px) {
+  .block-container {
+    width: 300px;
+  }
+
+  h1 {
+    font-size: 4em;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+  .text-block {
+    font-size: 1.5em;
+  }
+  .text-wrapper {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    border-right: none;
+  }
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both;
+  // blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 3.6em;
+  }
+}
+
+@keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+// @keyframes blinkTextCursor {
+//   from {
+//     border-right-color: rgba(0, 0, 0, 0.75);
+//   }
+//   to {
+//     border-right-color: transparent;
+//   }
+// }

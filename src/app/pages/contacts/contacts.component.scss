@@ -1,0 +1,67 @@
+.contacts-wrapper {
+  gap: 5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.contacts-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  margin-left: 15em;
+}
+
+.logoContainer {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo-wrapper {
+  display: flex;
+  gap: 4em;
+}
+
+svg {
+  fill: black;
+  background-color: white;
+  border-radius: 50%;
+}
+
+h1 {
+  display: flex;
+  font-size: 4em;
+  font-family: "Noticia Text", serif;
+  color: white;
+}
+.background-wrapper {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  .contacts-container {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) and (min-width: 250px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .contacts-container {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
