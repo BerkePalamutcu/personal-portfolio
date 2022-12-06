@@ -38,7 +38,10 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-
+.github
+.firebase
+.firebaserc
+firebase.json
 # System files
 .DS_Store
 Thumbs.db
